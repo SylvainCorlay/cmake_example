@@ -8,6 +8,8 @@ from setuptools import setup, Extension
 from setuptools.command.build_ext import build_ext
 from distutils.version import LooseVersion
 
+__version__ = '0.0.1'
+
 
 class CMakeExtension(Extension):
     def __init__(self, name, sourcedir=''):
@@ -58,7 +60,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='cmake_example',
-    version='0.0.1',
+    version=__version__,
     author='Dean Moldovan',
     author_email='dean0x7d@gmail.com',
     description='A test project using pybind11 and CMake',
